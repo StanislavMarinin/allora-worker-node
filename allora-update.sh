@@ -12,7 +12,7 @@ execute_with_prompt() {
 execute_with_prompt "cd ~/allora-chain/basic-coin-prediction-node"
 
 execute_with_prompt "docker compose down -v"
-execute_with_prompt "docker container prune -y"
+execute_with_prompt "docker container prune -f"
 execute_with_prompt "cd ~/allora-chain/ && rm -rf basic-coin-prediction-node"
 execute_with_prompt "cd ~/allora-chain/ && git clone https://github.com/allora-network/basic-coin-prediction-node"
 execute_with_prompt "cd ~/allora-chain/basic-coin-prediction-node && wget https://raw.githubusercontent.com/StanislavMarinin/allora-worker-node/main/config.json"
